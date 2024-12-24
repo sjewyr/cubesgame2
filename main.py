@@ -135,7 +135,7 @@ class Player(BaseObj):
         self.dmg = 50
         self.exp = 0
         self.mhp = 1000
-        self.hp = 50
+        self.hp = 1000
         self.lvl = 1
         self.bullet_size = 15
         self.last_shot_time = pygame.time.get_ticks()  # Время последнего выстрела
