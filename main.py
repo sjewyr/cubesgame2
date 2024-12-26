@@ -10,7 +10,7 @@ pygame.font.init()
 
 class Game:
     def __init__(self, screen: pygame.Surface):
-        print("Отсоси мою жопу")
+        self.paused = 0
         self.screen = screen
         self.all_entities = pygame.sprite.Group()
         self.bullets = pygame.sprite.Group()
@@ -21,6 +21,7 @@ class Game:
 
     def tick(self):
         for event in pygame.event.get():
+
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
@@ -52,7 +53,11 @@ class Game:
                 if event.key == pygame.K_ESCAPE:
                     pygame.quit()
                     sys.exit()
+                if event.key == pygame.K_p:
+                    self.paused = not self.paused
 
+        if self.paused:
+            return
         for k, v in pygame.sprite.groupcollide(
             self.player_bullets, self.enemies, False, False
         ).items():

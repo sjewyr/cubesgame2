@@ -1,4 +1,4 @@
-## Квадратики
+# Квадратики
 ---
 ![alt text](image.png)  
 
@@ -7,7 +7,7 @@
 Игра с квадратиками (на текстуры не хватило) которые стреляют друг в друга  
 Game with squares (no textures cuz lazy) that shoot eachother
 
-### Запуск \ Start
+## Запуск \ Start
 Первый запуск \ First start
 ```
 pip install pipx  
@@ -21,9 +21,21 @@ python main.py
 poetry shell
 python main.py
 ```
-### Управление \ Controls
+## Управление \ Controls
 
-Вы играете за серый квадрат. Управление на стрелочки. Стрельба на Z. Ваши пули синие, вражеские красные. Враги зеленого цвета. Ваш уровень вверху экрана. Ваши жизни внизу.  
+### Вы играете за серый квадрат. Управление на стрелочки. Стрельба на Z. Ваши пули синие, вражеские красные. Враги зеленого цвета. Ваш уровень вверху экрана. Ваши жизни внизу.
+
+---  
+P пауза  
+Стрелочки передвижение  
+Z стрельба  
+Esc выход
   
-You play as gray square. Move with arrows. Fire with Z. Your bullets blue, enemy's red. Enemies are green. Your level in the top corner. Your hp in the bottom. 
+### You play as gray square. Move with arrows. Fire with Z. Your bullets blue, enemy's red. Enemies are green. Your level in the top corner. Your hp in the bottom. 
+
+---
+P pause  
+Arrows movement  
+Z shoot  
+Esc exit  
 
