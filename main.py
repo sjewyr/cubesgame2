@@ -39,7 +39,8 @@ class Game:
                     self.player.rect.center,
                 )
             if event.type == ADD_ENEMY:
-                self.add_enemy()
+                if not self.paused:
+                    self.add_enemy()
             if event.type == ENEMY_DIED:
                 self.player.exp += 1
                 if self.player.exp >= self.player.lvl * 10:
@@ -54,6 +55,11 @@ class Game:
                     pygame.quit()
                     sys.exit()
                 if event.key == pygame.K_p:
+                    for enemy in self.enemies:
+                        if not self.paused:
+                            timed = pygame.time.get_ticks() - enemy.last_shot_time
+                            enemy.shoot_interval -= timed
+                        enemy.last_shot_time = pygame.time.get_ticks()
                     self.paused = not self.paused
 
         if self.paused:
